@@ -500,7 +500,8 @@ with io.open('README.rst', encoding='utf-8') as f:
 
 setup(
     name='xmlsec',
-    use_scm_version=True,
+    use_scm_version=False,
+    version='1.3.13',
     description='Python bindings for the XML Security Library',
     long_description=long_desc,
     ext_modules=[pyxmlsec],
