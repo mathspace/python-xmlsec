@@ -491,7 +491,7 @@ class build_ext(build_ext_orig):
 src_root = Path(__file__).parent / 'src'
 sources = [str(p.absolute()) for p in src_root.rglob('*.c')]
 pyxmlsec = Extension('xmlsec', sources=sources)
-setup_reqs = ['setuptools_scm[toml]>=3.4', 'pkgconfig>=1.5.1', 'lxml>=3.8']
+setup_reqs = ['pkgconfig>=1.5.1', 'lxml>=3.8']
 
 
 with io.open('README.rst', encoding='utf-8') as f:
@@ -500,7 +500,6 @@ with io.open('README.rst', encoding='utf-8') as f:
 
 setup(
     name='xmlsec',
-    use_scm_version=False,
     version='1.3.13',
     description='Python bindings for the XML Security Library',
     long_description=long_desc,
